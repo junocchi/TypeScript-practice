@@ -79,3 +79,11 @@ const shelter = new PetShelter();
   shelter.displayPets();
   shelter.searchPetsBySpecialSkill("grab-and-go");
   shelter.searchPetsBySpecies("dog");
+
+// build git:(main) node main.js
+// output:
+// Name: Lola
+// Species: Dog
+// Age: 3
+// Adopted: No
+// Special Skills: grab-and-go
