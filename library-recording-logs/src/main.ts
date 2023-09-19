@@ -13,12 +13,29 @@ type LogEntry<T> = {
   data: T;
   tags: string[];
 }
-
-function newLogEntry<T>(logEntry: T): T {
-  return logEntry;
+function createLogEntry<T>(data: T, tags: string[] = []): LogEntry<T> {
+  return {
+    timestamp: new Date(),
+    data,
+    tags,
+  };
 }
 
 function outputObj<T>(logEntry: T): void {
   console.log(logEntry);
 }
 
+function logFormattedEntry<T>(entry: LogEntry<T>): void {
+  const formattedEntry = `
+    Timestamp: ${entry.timestamp.toISOString()}
+    Data: ${JSON.stringify(entry.data)}
+    Tags: ${entry.tags.join(', ')}
+  `;
+  console.log(formattedEntry);
+}
+
+const logEntry1 = createLogEntry({ message: 'Log message 1' }, ['hello']);
+const logEntry2 = createLogEntry({ error: 'Error message' }, ['error', 'important']);
+
+logFormattedEntry(logEntry1);
+logFormattedEntry(logEntry2);
