@@ -11,3 +11,4 @@ const countVowels = (x: StringOrArray): number => {
 
 console.log(countVowels("abcde")); // => 2
 console.log(countVowels(["a", "e", "i", "o", "u"])); // => 5
+console.log(countVowels("juliana"));
