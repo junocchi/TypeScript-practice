@@ -20,3 +20,21 @@ function printEmployeePerDepto(employees, department) {
     });
 }
 printEmployeePerDepto(employees, "Sales");
+// Employees in the Sales department:
+// Name: Nath, Age: 40, Salary: £50600
+// Name: Rapha, Age: 32, Salary: £55700
+// Name: Mari, Age: 23, Salary: £48000
+// Name: Lara, Age: 30, Salary: £40500
+// Name: Lila, Age: 32, Salary: £35400
+// check if I can push an object to the readonly array
+function testReadonlyArrayModification(arr) {
+    try {
+        arr.push({ name: "Juli", age: 20, department: "Sales", salary: 48000 });
+        console.log("Array modification successful.");
+    }
+    catch (error) {
+        console.error("Array modification error:", error);
+    }
+}
+testReadonlyArrayModification(employees);
+printEmployeePerDepto(employees, "Sales");
