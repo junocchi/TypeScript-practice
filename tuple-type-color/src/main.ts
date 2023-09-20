@@ -26,3 +26,9 @@ console.log(isBright(userColor));
 
 const invertedColor = invertColor(userColor);
 console.log(invertedColor);
+
+// node build/main.js
+// output:
+// [ 255, 0, 255 ]
+// true
+// [ 0, 255, 0 ]

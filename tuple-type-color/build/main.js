@@ -1,5 +1,4 @@
 "use strict";
-// magenta [255,0,255]
 function createColor(r, g, b) {
     if (r < 0 || r > 255 || g < 0 || g > 255 || b < 0 || b > 255) {
         throw new Error("RGB values are between 0 and 255.");
@@ -16,7 +15,7 @@ function invertColor(color) {
     var invertedB = 255 - color[2];
     return [invertedR, invertedG, invertedB];
 }
-var userColor = createColor(0, 100, 100);
+var userColor = createColor(255, 0, 255);
 console.log(userColor);
 console.log(isBright(userColor));
 var invertedColor = invertColor(userColor);
